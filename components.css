@@ -1,0 +1,787 @@
+/* ===============================
+   COMPONENTS CSS
+   Card, Button, UI Elements
+================================ */
+
+/* =========================
+   BREADCRUMBS
+========================= */
+:root {
+  --primary: #8c4af2;
+  --primary-soft: #ede9fe;
+  --primary-light: #f5f3ff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --white: #ffffff;
+  --radius: 14px;
+}
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 0;
+
+  font-size: 24px; /* lebih besar */
+  font-weight: 500;
+  color: #3e0497; /* panah & teks sama warna */
+
+  /* PENTING */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.breadcrumbs span {
+  white-space: nowrap;
+}
+
+.breadcrumbs .link {
+  cursor: pointer;
+}
+
+.breadcrumbs .link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    margin-left: 0; /* sidebar biasanya collapse */
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+.btn-secondary {
+  background: #e3d0ff;
+  color: #3e0497;
+}
+
+/* PRIMARY hover */
+.btn-primary:hover:not(:disabled) {
+  background: #e3d0ff; /* ungu lebih gelap */
+  color: #3e0497;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.35);
+}
+
+/* SECONDARY hover → jadi ungu tua + teks putih */
+.btn-secondary:hover:not(:disabled) {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.25);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+/* WELCOME CARD */
+
+.welcome-card {
+  background-color: var(--ungu-soft);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.welcome-text h2 {
+  margin-bottom: 8px;
+}
+
+.welcome-text p {
+  margin-bottom: 16px;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--ungu-primary);
+}
+
+/* GRID */
+
+.card-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card-grid.four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* INFO CARD */
+
+.info-card {
+  background-color: var(--putih);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.info-card .icon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--ungu-primary);
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+
+/* STEP */
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.step-card {
+  background-color: var(--putih);
+  border-radius: var(--radius);
+  padding: 14px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.step-card p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.step-number {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ungu-primary);
+  color: var(--putih);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA */
+
+.cta-section {
+  margin: 50px 0 20px;
+}
+
+/* =====================
+   KONTEN HALAMAN KELAS
+===================== */
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Container kartu */
+.kelas-container {
+  display: flex;
+  gap: 32px;
+}
+
+/* =====================
+   KARTU KELAS
+===================== */
+
+.kelas-card {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Angka Romawi */
+.kelas-header {
+  font-size: 64px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+}
+
+/* =====================
+   PROGRESS
+===================== */
+
+.kelas-progress {
+  margin-top: 16px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  height: 100%;
+  display: block;
+  border-radius: 999px;
+}
+
+/* =====================
+   INFO
+===================== */
+
+.kelas-info {
+  margin-top: auto;
+}
+
+.kelas-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.kelas-info p {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+/* =====================
+   KONTEN HALAMAN KELAS
+===================== */
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Container kartu */
+.kelas-container {
+  display: flex;
+  gap: 32px;
+}
+
+/* =====================
+   KARTU KELAS
+===================== */
+
+.kelas-card {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Angka Romawi */
+.kelas-header {
+  font-size: 64px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+}
+
+/* =====================
+   PROGRESS
+===================== */
+
+.kelas-progress {
+  margin-top: 16px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  height: 100%;
+  display: block;
+  border-radius: 999px;
+}
+
+/* =====================
+   INFO
+===================== */
+
+.kelas-info {
+  margin-top: auto;
+}
+
+.kelas-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.kelas-info p {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.kelas-card.completed {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.kelas-card.completed .progress-bar span {
+  width: 100%;
+  background-color: var(--color-success);
+}
+
+.kelas-card.active {
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.kelas-card.active .progress-bar span {
+  width: 5%;
+  background-color: var(--color-primary);
+}
+
+.kelas-card.locked {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.kelas-card.locked .kelas-header {
+  color: #9ca3af;
+}
+
+.kelas-card.locked .progress-bar span {
+  width: 0%;
+  background-color: #d1d5db;
+}
+
+/* =========================
+   HALAMAN PERTEMUAN
+========================= */
+
+/* Header */
+.pertemuan-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   KALENDER
+========================= */
+
+.calendar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calendar-nav {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.calendar-strip {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  overflow: hidden; /* ⬅️ BUKAN auto */
+}
+
+.calendar-day {
+  flex: 1;
+  min-width: 64px;
+  position: relative;
+  padding: 8px 0;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔥 PENANDA HARI INI (SIDEBAR STYLE) */
+.calendar-day.today::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #7b5cff;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.calendar-day.today {
+  color: #fff;
+}
+
+.calendar-day .day-name {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.calendar-day.today .day-name {
+  color: #e0d9ff;
+}
+
+/* optional: kalau diklik */
+.calendar-day.active {
+  outline: 2px solid #7b5cff;
+}
+
+/* =========================
+   FILTER SEMESTER
+========================= */
+
+.semester-filter {
+  margin: 24px 0;
+}
+
+.semester-filter select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* =========================
+   TABEL PERTEMUAN
+========================= */
+/* =========================
+   ITEM BASE
+========================= */
+/* =========================
+   ITEM CARD
+========================= */
+
+.pertemuan-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 160px 200px;
+  align-items: center;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+/* HEADER KOLUMN (VISUAL SAJA) */
+.pertemuan-columns {
+  display: grid;
+  grid-template-columns: 80px 1fr 160px 200px;
+  gap: 16px;
+  padding: 6px 16px;
+  font-size: 11px;
+  color: var(--color-muted);
+  text-transform: lowercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .pertemuan-columns {
+    grid-template-columns: 60px 1fr 120px 160px;
+    font-size: 10px;
+  }
+}
+
+.pertemuan-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* NOMOR BESAR */
+.pertemuan-no {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+.pertemuan-judul {
+  font-weight: 600;
+  color: #111;
+}
+.pertemuan-tanggal {
+  color: #555;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #ede9fe;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #8b5cf6;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* =========================
+   LOCKED (DISABLED)
+========================= */
+
+.pertemuan-item.locked {
+  background: #f5e6ff;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pertemuan-item.locked .progress-bar span {
+  background: #e0c6ff;
+}
+.lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(124, 58, 237, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b21a8;
+  border-radius: 12px;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+.pertemuan-container,
+.calendar-strip {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.main-content {
+  margin-left: 260px;
+  padding: 32px 40px;
+}
+.help-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.help-intro {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  background: #f8f9fa;
+  border: none;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background: #eef1f4;
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px;
+  background: #fff;
+  color: #333;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-item .icon {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(180deg); /* v → ^ */
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* SUMMARY */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* STATUS */
+.status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.selesai {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.proses {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.terkunci {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* KELAS */
+.class-progress {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.class-progress li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.note {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* PERTEMUAN */
+.meeting-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.meeting {
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* INFO */
+.info ul {
+  padding-left: 18px;
+}
+
+.disclaimer {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .meeting-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

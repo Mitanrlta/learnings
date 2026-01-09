@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+                <link rel="stylesheet" href="components.css" />
+
+
+  </head>
+  <body>
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <svg viewBox="0 0 24 24" class="hamburger-icon">
+    <path d="M3 6h18M3 12h18M3 18h18"/>
+  </svg>
+</button>
+
+<aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">LearningID</div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="beranda.html" class="menu-item">Beranda</a>
+        <a href="kelas.html" class="menu-item">Kelas</a>
+        <a href="dashboard.html" class="menu-item">Dashboard</a>
+        <a href="bantuan.html" class="menu-item active">Bantuan</a>
+      </nav>
+    </aside>
+  <main class="main-content">
+  <div class="page-header">
+  <h1 class="page-title">Bantuan</h1>
+
+  <button id="btnHelpIcon" class="help-icon-btn" aria-label="Bantuan">
+  <svg viewBox="0 0 24 24" class="help-icon" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+    10-4.48 10-10S17.52 2 12 2zm0 17a1.25 1.25 0 1 1 0-2.5
+    1.25 1.25 0 0 1 0 2.5zm1.07-7.75-.9.92C11.45 12.9 11
+    13.5 11 15h2v-.5c0-.55.45-1.05 1.17-1.75l1.24-1.26a2.5
+    2.5 0 1 0-4.27-1.77h-2a4.5 4.5 0 1 1 7.73 3.36z"/>
+  </svg>
+</button>
+</div>
+<section class="help-page">
+  <h1>🆘 HALAMAN BANTUAN</h1>
+  <p class="help-intro">
+    Panduan Penggunaan Platform Pembelajaran<br />
+    Halaman ini disediakan untuk membantu pengguna apabila mengalami kendala selama
+    menggunakan platform pembelajaran, baik terkait akses kelas, pertemuan, video
+    pembelajaran, kuis, maupun navigasi.
+  </p>
+
+  <!-- ACCORDION -->
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        🎓 Mekanisme Kelas
+        <span class="icon">v</span>
+      </button>
+      <div class="accordion-content">
+        <p><strong>Mengapa hanya satu kelas yang dapat diakses?</strong></p>
+        <ul>
+          <li>Akses kelas disesuaikan dengan jenjang siswa saat ini</li>
+          <li>Kelas yang telah dilalui berstatus Selesai (100%)</li>
+          <li>Kelas yang sedang dijalani berstatus Aktif</li>
+          <li>Kelas di atasnya akan Terkunci</li>
+        </ul>
+
+        <p><strong>Kapan kelas berikutnya akan terbuka?</strong></p>
+        <ul>
+          <li>Siswa telah menyelesaikan kelas sebelumnya hingga 100%</li>
+          <li>Waktu kenaikan kelas telah terpenuhi</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        📅 Semester & Kalender Pembelajaran
+        <span class="icon">v</span>
+      </button>
+      <div class="accordion-content">
+        <p><strong>Mengapa tidak semua semester dapat dipilih?</strong></p>
+        <ul>
+          <li>Semester mengikuti kalender akademik</li>
+          <li>Jika sedang berada di Semester Ganjil, maka pertemuan Semester Genap belum ditampilkan.</li>
+          <li>Semester Genap akan terbuka ketika sudah memasuki periode semester tersebut.</li>
+        </ul>
+         <p><strong>Apa fungsi kalender pada halaman pertemuan</strong></p>
+        <ul>
+          <p>Kalender berfungsi sebagai penanda waktu pembelajaran dan membantu pengguna mengetahui jadwal pertemuan yang sedang atau akan berlangsung.</p>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">
+📘 Pertemuan Pembelajaran
+        <span class="icon">v</span>
+      </button>
+      <div class="accordion-content">
+        <p><strong>Mengapa pertemuan masih terkunci?
+</strong></p>
+        <ul>
+          <li>Tanggal pertemuan belum sesuai jadwal sekolah, atau
+          </ul>
+Pertemuan sebelumnya belum diselesaikan.</li>
+<p><strong><p><strong>Mengapa pertemuan masih terkunci?
+</strong></p>
+</strong></p>
+ <ul>
+          <li>Setiap semester terdiri dari 16 pertemuan, yang harus diselesaikan secara berurutan.
+</li>
+    
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">
+        🎥 Kendala pada Video Pembelajaran
+        <span class="icon">v</span>
+      </button>
+      <div class="accordion-content">
+        <p><strong>Mengapa video tidak dapat di-skip atau dipercepat?</strong></p>
+        <ul>
+          <li>Video pembelajaran wajib ditonton hingga selesai sebagai bagian dari proses belajar sebelum mengerjakan kuis.
+</li>
+</ul>
+        <p><strong>Mengapa video tidak dapat di-skip atau dipercepat?</strong></p>
+ <ul>
+          <li>Mengapa tombol kuis belum terbuka?
+</li>
+          <li>Tombol kuis akan aktif secara otomatis setelah video selesai diputar sepenuhnya.</li>
+        </ul>
+<p>Pastikan koneksi internet stabil dan halaman tidak ditutup selama pemutaran video.
+</p>
+      </div>
+    </div>
+
+ <div class="accordion-item">
+  <button class="accordion-header">
+    📝 Kendala pada Kuis
+    <span class="icon">v</span>
+  </button>
+  <div class="accordion-content">
+    <p><strong>Mengapa kuis masih terkunci?</strong></p>
+    <p>Kuis terkunci karena:</p>
+    <ul>
+      <li>Video pembelajaran belum selesai ditonton</li>
+      <li>Kuis sebelumnya belum mencapai standar nilai minimum</li>
+    </ul>
+
+    <p><strong>Mengapa tidak dapat melanjutkan ke indikator berikutnya?</strong></p>
+    <p>
+      Indikator berikutnya hanya dapat dibuka setelah pengguna lulus kuis pada
+      indikator sebelumnya.
+    </p>
+
+    <p><strong>❌ Jika Nilai Tidak Memenuhi Standar Minimum</strong></p>
+    <p><strong>Apa yang terjadi jika tidak lulus kuis?</strong></p>
+    <p>Pengguna akan:</p>
+    <ul>
+      <li>Dikembalikan ke video pembelajaran</li>
+      <li>Wajib menonton ulang video</li>
+      <li>Mengulang kuis setelah video selesai</li>
+    </ul>
+    <p>
+      Proses ini bertujuan untuk memastikan pemahaman materi secara optimal.
+    </p>
+
+    <p><strong>✅ Jika Nilai Memenuhi Standar Minimum</strong></p>
+    <p><strong>Apa yang terjadi jika lulus kuis?</strong></p>
+    <ul>
+      <li>Indikator dinyatakan selesai</li>
+      <li>Pengguna dapat melanjutkan ke indikator berikutnya</li>
+      <li>Progress pembelajaran tersimpan secara otomatis</li>
+    </ul>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <button class="accordion-header">
+    🧭 Navigasi & Breadcrumbs
+    <span class="icon">v</span>
+  </button>
+  <div class="accordion-content">
+    <p><strong>Apa itu breadcrumbs dan apa fungsinya?</strong></p>
+    <p>
+      Breadcrumbs adalah navigasi tambahan untuk menunjukkan posisi belajar
+      pengguna.
+    </p>
+
+    <p><strong>Contoh:</strong></p>
+    <p>Beranda → Kelas 11 → Pertemuan 3 → Indikator 2</p>
+
+    <p><strong>Fungsi breadcrumbs:</strong></p>
+    <ul>
+      <li>Menunjukkan posisi halaman saat ini</li>
+      <li>Memudahkan kembali ke halaman sebelumnya</li>
+      <li>Membantu navigasi pembelajaran secara terstruktur</li>
+    </ul>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <button class="accordion-header">
+    📊 Progress Pembelajaran
+    <span class="icon">v</span>
+  </button>
+  <div class="accordion-content">
+    <p><strong>Bagaimana progress pembelajaran disimpan?</strong></p>
+    <p>
+      Progress pembelajaran tersimpan secara otomatis oleh sistem.
+    </p>
+
+    <p><strong>Di mana saya bisa melihat progress?</strong></p>
+    <p>
+      Pengguna dapat memantau progress melalui Dashboard.
+    </p>
+
+    <p>
+      Status pertemuan akan berubah menjadi <strong>Selesai</strong> setelah
+      seluruh tahapan diselesaikan.
+    </p>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <button class="accordion-header">
+    ℹ️ Bantuan Tambahan
+    <span class="icon">v</span>
+  </button>
+  <div class="accordion-content">
+    <p><strong>Masih mengalami kendala?</strong></p>
+    <ul>
+      <li>Gunakan tombol Bantuan yang tersedia di setiap halaman</li>
+      <li>Baca panduan singkat pada modal bantuan</li>
+      <li>Kunjungi halaman bantuan ini untuk penjelasan lengkap</li>
+    </ul>
+  </div>
+</div>
+</main>
+
+<div id="helpModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Bantuan Penggunaan</h2>
+
+    <h4>Kelas & Pertemuan</h4>
+    <ul>
+      <li>Kelas disesuaikan jenjang siswa</li>
+      <li>Pertemuan dibuka bertahap</li>
+    </ul>
+
+    <h4>Video & Kuis</h4>
+    <ul>
+      <li>Video wajib ditonton sampai selesai</li>
+      <li>Kuis terbuka setelah video selesai</li>
+    </ul>
+
+    <h4>Navigasi</h4>
+    <p>Gunakan breadcrumbs untuk mengetahui posisi belajar</p>
+
+    <button id="goHelpPage" class="btn-secondary" >👉 Kunjungi Halaman Bantuan</button>
+    <button id="closeHelp" class="btn-primary">Tutup</button>
+  </div>
+</div>
+
+<script src="bantuan.js" defer></script>
+<script src="sidebar.js" defer></script>
+
+<script src="bantuan-modal.js" defer></script>
+  </body>
+</html>

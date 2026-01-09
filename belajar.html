@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Belajar</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="belajar.css" />
+    <link rel="stylesheet" href="quiz.css" />
+    
+
+    <body>
+      <!-- HAMBURGER BUTTON (MOBILE ONLY) -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <svg viewBox="0 0 24 24" class="hamburger-icon">
+    <path d="M3 6h18M3 12h18M3 18h18"/>
+  </svg>
+</button>
+
+      <!-- ================= SIDEBAR (PLACEHOLDER) ================= -->
+<aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <div class="logo">LearningID</div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="beranda.html" class="menu-item">Beranda</a>
+          <a href="kelas.html" class="menu-item active">Kelas</a>
+          <a href="dashboard.html" class="menu-item">Dashboard</a>
+          <a href="bantuan.html" class="menu-item">Bantuan</a>
+        </nav>
+      </aside>
+
+      <!-- ================= MAIN CONTENT ================= -->
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <div id="breadcrumbs" class="breadcrumb"></div>
+       
+
+  <button id="btnHelpIcon" class="help-icon-btn" aria-label="Bantuan">
+  <svg viewBox="0 0 24 24" class="help-icon" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+    10-4.48 10-10S17.52 2 12 2zm0 17a1.25 1.25 0 1 1 0-2.5
+    1.25 1.25 0 0 1 0 2.5zm1.07-7.75-.9.92C11.45 12.9 11
+    13.5 11 15h2v-.5c0-.55.45-1.05 1.17-1.75l1.24-1.26a2.5
+    2.5 0 1 0-4.27-1.77h-2a4.5 4.5 0 1 1 7.73 3.36z"/>
+  </svg>
+</button>
+
+
+        <!-- ================= STATE 1 : PRE-LEARNING ================= -->
+        <section id="preLearning" class="state active">
+          <button id="btnAbsensi" class="btn-secondary">Absensi</button>
+
+          <div class="info-card">
+            <h1>PENGANTAR PEMBELAJARAN</h1>
+            <h2>Deskripsi Materi</h2>
+            <p>
+              Pada pertemuan ini, peserta didik akan mempelajari dasar perancangan struktur data menggunakan Entity Relationship Diagram (ERD). Materi mencakup pengenalan konsep ERD, komponen penyusunnya, analisis kebutuhan data, hingga penerapan ERD sederhana berdasarkan studi kasus.
+              Materi disusun bertahap untuk membantu peserta didik memahami hubungan antar data sebelum membangun sebuah database.
+            </p>
+            <h2>Tujuan Pembelajaran</h2>
+            <p>
+              Setelah mengikuti pembelajaran ini, peserta didik diharapkan mampu:
+            </p>
+            <ul>
+              <li>Memahami fungsi dan peran ERD dalam perancangan sistem</li>
+              <li>Mengidentifikasi komponen utama dalam ERD</li>
+              <li>Menganalisis kebutuhan data untuk membentuk entitas dan relasi</li>
+              <li>Membuat ERD sederhana berdasarkan studi kasus yang diberikan</li>
+            </ul>
+
+               <h2>Indikator Pembelajaran</h2>
+            <p>
+              Pembelajaran ini terdiri dari beberapa indikator yang akan dipelajari dan diuji, yaitu:
+            </p>
+            <ul>
+              <li>Menjelaskan pengertian dan fungsi ERD</li>
+              <li>Mengidentifikasi entitas, atribut, dan relasi dalam ERD</li>
+              <li>Menganalisis kebutuhan data dalam suatu sistem</li>
+              <li>Menyusun ERD sederhana sesuai studi kasus</li>
+            </ul>
+
+             <h2>Panduan Pembelajaran</h2>
+            <p>
+              Untuk mengikuti pembelajaran dengan baik, perhatikan ketentuan berikut:
+            </p>
+            <ul>
+              <li>Lakukan absen terlebuh dahulu dengan klik tombol absensi</li>
+              <li>Jika absensi berhasil, maka tombol mulai belajar akan aktif</li>
+              <li>Klik tombol mulai belajar untuk memulai pembelajaran</li>
+              <li>Perhatikan Catatan dan intruksi pengerjaan yang ada di setiap indikator</li>
+              <P>Yuk, Mulai belajar</P>
+            </ul>
+          </div>
+
+          <!-- Tombol Mulai Belajar (TERKUNCI) -->
+          <button id="btnMulaiBelajar" class="btn-primary disabled" disabled>
+            Mulai Belajar
+          </button>
+        </section>
+        <!-- ================= STATE 2 : LEARNING / INDIKATOR ================= -->
+        <section id="learningState" class="state hidden">
+          <!-- ===== Header Indikator ===== -->
+          <div class="indicator-header card">
+            <h2>INDIKATOR 1</h2>
+            <h3>Memahami Konsep Entity Relationship Diagram (ERD)</h3>
+            <p>
+              Pada indikator ini, kamu akan mempelajari mengapa ERD dibutuhkan dalam perancangan sistem.
+Kamu akan memahami bagaimana data yang banyak dan saling terhubung perlu dimodelkan agar tetap rapi, konsisten, dan mudah dianalisis.</p>
+            <p>Materi ini menjadi dasar penting sebelum membahas komponen dan pembuatan ERD lebih lanjut.</p>
+          </div>
+
+          <!-- ===== Layout Utama ===== -->
+          <div class="learning-layout">
+            <!-- KIRI: VIDEO + KUIS -->
+            <div class="video-column">
+              <div class="video-box">
+                <div class="video-wrapper">
+                  <div id="ytPlayer"></div>
+                </div>
+              </div>
+
+              <button
+                id="btnMulaiKuis"
+                class="btn-quiz"
+                data-indikator="1"
+                disabled
+              >
+                Mulai Kuis
+              </button>
+            </div>
+
+            <!-- KANAN: CATATAN -->
+            <aside class="note-section">
+              <h3>Catatan</h3>
+              <p><strong>
+                Paduan Menonton Video
+              </strong></p>
+              <ul>
+              <li>Tonton video pembelajaran sampai selesai.</li>
+              <li>Perhatikan bagaimana hubungan antar data dijelaskan melalui contoh sistem.</li>
+              <li>Video harus ditonton penuh untuk membuka akses ke kuis.</li>
+            </ul>
+             <p><strong>
+                Paduan Mengerjakan Kuis
+              </strong></p>
+              <ul>
+              <li>Kuis berisi pertanyaan untuk menguji pemahamanmu tentang konsep dasar ERD.</li>
+              <li>Jawablah setiap soal dengan teliti.</li>
+              <li>Setelah semua soal dijawab, sistem akan menampilkan hasil kuis.</li>
+            </ul>
+            <p><strong>
+                Hasil Kuis
+              </strong></p>
+              <ul>
+              <li>Jika nilai memenuhi standar, kamu dapat melanjutkan ke indikator berikutnya.</li>
+              <li>Jika belum memenuhi, kamu perlu menonton ulang video dan mengerjakan kuis kembali.</li>
+            </ul>
+                        </aside>
+
+          </div>
+
+          <!-- NAVIGASI -->
+          <div class="learning-actions">
+            <button id="btnBerikutnya" class="btn-next disabled" disabled>
+              Berikutnya
+            </button>
+          </div>
+        </section>
+      
+<!-- ================= STATE 3 : LEARNING / INDIKATOR ================= -->
+<section id="learningState2" class="state hidden">
+  <!-- ===== Header Indikator ===== -->
+  <div class="indicator-header card">
+    <h2> INDIKATOR 2</h2>
+    <h3>Mengidentifikasi Komponen Utama ERD</h3>
+    <p>
+      Pada indikator ini, kamu akan mengenali tiga komponen utama ERD, yaitu:</p>
+    <ul>
+    <li>Entitas</li>
+    <li>Atribut</li>
+    <li>Relasi</li>
+    <p>
+      Ketiga komponen ini selalu digunakan dalam setiap perancangan ERD dan menjadi struktur dasar dalam memodelkan data.</p>
+  </div>
+
+  <!-- ===== Layout Utama ===== -->
+  <div class="learning-layout">
+    <!-- KIRI: VIDEO + KUIS -->
+    <div class="video-column">
+      <div class="video-box">
+        <div class="video-wrapper">
+          <!-- VIDEO PLAYER (SAMA, JANGAN GANTI STRUKTUR) -->
+          <div id="ytPlayer2"></div>
+        </div>
+      </div>
+
+      <button
+        id="btnMulaiKuis2"
+        class="btn-quiz"
+        data-indikator="2"
+        disabled
+      >
+        Mulai Kuis
+      </button>
+    </div>
+
+    <!-- KANAN: CATATAN -->
+    <aside class="note-section">
+      <h3>Catatan</h3>
+      <p><strong>
+        Paduan Menonton Video
+      </strong></p>
+       <ul>
+    <li>Tonton video untuk memahami pengertian dan fungsi setiap komponen ERD.</li>
+    <li>Perhatikan contoh entitas, atribut, dan relasi yang dijelaskan.</li>
+    <li>Video harus ditonton sampai selesai untuk membuka kuis.</li>
+    </ul>
+    <p><strong>
+        Paduan Mengerjakan Kuis
+      </strong></p>
+       <ul>
+    <li>Kuis dirancang untuk menguji pemahamanmu tentang komponen ERD.</li>
+    <li>Bacalah setiap soal dengan cermat sebelum menjawab.</li>
+    <li>Pastikan semua soal dijawab untuk mendapatkan hasil akhir.</li>
+    </ul>
+    <p><strong>
+        Hasil Kuis
+      </strong></p>
+       <ul>
+    <li>Lulus → lanjut ke indikator berikutnya.</li>
+    <li>Belum lulus → pelajari kembali video dan ulangi kuis.</li>
+    </ul>
+    </aside>
+  </div>
+
+  <!-- NAVIGASI -->
+  <div class="learning-actions">
+    <button id="btnBerikutnya2" class="btn-next disabled" disabled>
+      Berikutnya
+    </button>
+  </div>
+</section>
+<!-- ================= STATE 4 : LEARNING / INDIKATOR ================= -->
+<section id="learningState3" class="state hidden">
+  <!-- ===== Header Indikator ===== -->
+  <div class="indicator-header card">
+   <h2> INDIKATOR 3</h2>
+    <h3>Menganalisis Kebutuhan Data untuk Membentuk Entitas & Relasi</h3>
+    <p>
+      Di indikator ini, kamu akan belajar cara menganalisis kebutuhan data sebelum membuat ERD.
+Kamu akan memahami bagaimana menentukan:</p>
+    <ul>
+    <li>Entitas yang diperlukan</li>
+    <li>Atribut yang relevan</li>
+    <li>Serta relasi antar entitas berdasarkan alur sistem.</li>
+    </ul>
+  </div>
+
+  <!-- ===== Layout Utama ===== -->
+  <div class="learning-layout">
+    <!-- KIRI: VIDEO + KUIS -->
+    <div class="video-column">
+      <div class="video-box">
+        <div class="video-wrapper">
+          <!-- VIDEO PLAYER (SAMA, JANGAN GANTI STRUKTUR) -->
+          <div id="ytPlayer3"></div>
+        </div>
+      </div>
+
+      <button
+        id="btnMulaiKuis3"
+        class="btn-quiz"
+        data-indikator="3"
+        disabled
+      >
+        Mulai Kuis
+      </button>
+    </div>
+
+    <!-- KANAN: CATATAN -->
+    <aside class="note-section">
+      <h3>Catatan</h3>
+      <p><strong>
+        Paduan Menonton Video
+      </strong></p>
+      <ul>
+    <li>Perhatikan langkah-langkah analisis kebutuhan data yang dijelaskan.</li>
+    <li>Fokus pada proses mengidentifikasi entitas dan relasi dari sebuah sistem.</li>
+    <li>Video wajib ditonton sampai selesai.</li>
+    </ul>
+    <p><strong>
+        Paduan Mengerjakan Kuis
+      </strong></p>
+      <ul>
+    <li>Kuis berisi soal analisis sederhana berdasarkan contoh sistem.</li>
+    <li>Gunakan logika, bukan sekadar menghafal.</li>
+    <li>Jawablah seluruh soal untuk melihat hasil akhir.</li>
+    </ul>
+    <p><strong>
+      Hasil Kuis
+      </strong></p>
+      <ul>
+    <li>Nilai memenuhi standar → lanjut ke indikator berikutnya.</li>
+    <li>Nilai belum memenuhi → ulangi pembelajaran dan kuis.</li>
+    </ul>
+    </aside>
+  </div>
+
+  <!-- NAVIGASI -->
+  <div class="learning-actions">
+    <button id="btnBerikutnya3" class="btn-next disabled" disabled>
+      Berikutnya
+    </button>
+  </div>
+</section>
+<!-- ================= STATE 3 : LEARNING / INDIKATOR ================= -->
+<section id="learningState4" class="state hidden">
+  <!-- ===== Header Indikator ===== -->
+  <div class="indicator-header card">
+    <h2> INDIKATOR 4</h2>
+    <h3>Membuat ERD Sederhana Berdasarkan Studi Kasus</h3>
+    <p>
+      Pada indikator ini, kamu akan menerapkan seluruh pemahaman sebelumnya untuk membuat ERD sederhana berdasarkan studi kasus nyata.
+      Kamu akan melihat bagaimana entitas, atribut, relasi, dan kardinalitas digabungkan menjadi satu diagram ERD yang utuh.
+    </p>
+  </div>
+
+  <!-- ===== Layout Utama ===== -->
+  <div class="learning-layout">
+    <!-- KIRI: VIDEO + KUIS -->
+    <div class="video-column">
+      <div class="video-box">
+        <div class="video-wrapper">
+          <!-- VIDEO PLAYER (SAMA, JANGAN GANTI STRUKTUR) -->
+          <div id="ytPlayer4"></div>
+        </div>
+      </div>
+
+      <button
+        id="btnMulaiKuis4"
+        class="btn-quiz"
+        data-indikator="4"
+        disabled
+      >
+        Mulai Kuis
+      </button>
+    </div>
+
+    <!-- KANAN: CATATAN -->
+    <aside class="note-section">
+       <h3>Catatan</h3>
+      <p><strong>
+        Paduan Menonton Video
+      </strong></p>
+      <ul>
+    <li>Tonton video dengan fokus pada langkah-langkah penyusunan ERD.</li>
+    <li>Perhatikan bagaimana studi kasus diterjemahkan menjadi diagram.</li>
+    <li>Video harus ditonton penuh sebelum kuis terbuka.</li>
+    </ul>
+    <p><strong>
+        Paduan Mengerjakan Kuis
+      </strong></p>
+      <ul>
+    <li>Kuis menguji pemahamanmu dalam membaca dan menganalisis ERD sederhana.</li>
+    <li>Jawablah soal berdasarkan studi kasus yang telah dipelajari.</li>
+    <li>Selesaikan kuis untuk melihat hasilnya.</li>
+    </ul>
+    <p><strong>
+        Hasil Kuis
+      </strong></p>
+      <ul>
+    <li>Lulus → lanjut ke materi rangkuman.</li>
+    <li>Belum lulus → pelajari kembali video dan ulangi kuis.</li>
+    </ul>
+    </aside>
+  </div>
+
+  <!-- NAVIGASI -->
+  <div class="learning-actions">
+    <button id="btnBerikutnya4" class="btn-next disabled" disabled>
+      Berikutnya
+    </button>
+  </div>
+</section>
+<!-- ================= STATE 3 : LEARNING / INDIKATOR ================= -->
+<section id="learningState5" class="state hidden">
+  <!-- ===== Header Indikator ===== -->
+  <div class="indicator-header card">
+    <h2>RANGKUMAN MATERI</h2>
+     <p>
+      Pada pertemuan ini, peserta didik telah mempelajari bahwa ERD merupakan alat penting dalam merancang struktur data sebuah sistem. ERD membantu menggambarkan hubungan antar entitas secara terstruktur melalui entitas, atribut, dan relasi.
+    </p>
+    <p>
+      Dengan menganalisis kebutuhan data dan menerapkannya ke dalam studi kasus, peserta didik diharapkan mampu memahami bagaimana ERD digunakan sebagai dasar perancangan database yang rapi dan terorganisir.
+    </p>
+  </div>
+  </div>
+
+  <!-- ===== Layout Utama ===== -->
+  <div class="learning-layout">
+    <!-- KIRI: VIDEO + KUIS -->
+    <div class="video-column">
+      <div class="video-box">
+        <div class="video-wrapper">
+          <!-- VIDEO PLAYER (SAMA, JANGAN GANTI STRUKTUR) -->
+          <div id="ytPlayer5"></div>
+        </div>
+      </div>
+
+<button
+  id="btnSelesaiPertemuan"
+  class="btn-quiz disabled"
+  disabled
+>
+  Selesai & Kembali ke Pertemuan
+</button>
+  </div>
+
+  
+</section>
+      <!-- ================= MODAL ABSENSI (Layer C) ================= -->
+      <!-- MODAL ABSENSI -->
+      <div class="modal-overlay hidden" id="absensiModal">
+        <div class="modal">
+          <h2>Absensi</h2>
+
+          <div class="form-group">
+            <label>Nama Siswa</label>
+            <input type="text" id="namaSiswa" placeholder="Masukkan nama" />
+          </div>
+
+          <div class="form-group">
+            <label>Kelas</label>
+            <input type="text" id="kelasSiswa" placeholder="Contoh: XI IPA 1" />
+          </div>
+
+          <div class="form-group">
+            <label>Ket. Absen</label>
+            <div class="readonly-box" id="ketAbsen">
+              Sems Ganjil - Pertemuan 2<br />
+              14/01/2026 - 09.00 WIB
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-secondary" id="btnBatalAbsensi">Batal</button>
+            <button class="btn-primary" id="btnSimpanAbsensi">Simpan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL kuis -->
+
+      <div id="quizModal" class="quiz-modal hidden">
+        <!-- ========== SOAL (YANG SUDAH ADA) ========== -->
+        <div class="quiz-card" id="quizSoal">
+          <div class="quiz-header">
+            <span id="quizProgress">Pertanyaan 1/5</span>
+            <span id="quizTimer">05:00</span>
+          </div>
+
+          <h2 id="quizQuestion"></h2>
+          <div id="quizOptions" class="quiz-options"></div>
+
+          <div class="quiz-actions">
+            <button id="btnPrev" class="btn-secondary">Back</button>
+            <button id="btnNext" class="btn-primary">Next</button>
+          </div>
+        </div>
+
+        <!-- ========== HASIL KUIS ========== -->
+<!-- ========== HASIL KUIS ========== -->
+<div id="quizResultModal" class="quiz-modal hidden">
+  <div class="quiz-card quiz-result-card">
+
+    <!-- ICON HASIL -->
+    <div class="result-icon">
+      <!-- ICON LULUS -->
+      <img
+        id="iconPassed"
+        src="check.png"
+        alt="Lulus"
+        class="hidden"
+      />
+
+      <!-- ICON TIDAK LULUS -->
+      <img
+        id="iconFailed"
+        src="cross.png"
+        alt="Belum Lulus"
+        class="hidden"
+      />
+    </div>
+
+    <!-- JUDUL -->
+    <h2 id="resultTitle"></h2>
+
+    <!-- SKOR -->
+    <div class="result-score-box">
+      <span class="score-label">Skor</span>
+      <span id="resultScore" class="score-value"></span>
+    </div>
+
+    <!-- DESKRIPSI -->
+    <p id="resultDescription" class="result-desc"></p>
+
+    <!-- ACTION -->
+    <div class="quiz-actions">
+
+      <!-- ❌ HANYA UNTUK TIDAK LULUS -->
+      <button id="btnRetry" class="btn-secondary hidden">
+        Pelajari Ulang
+      </button>
+
+      <!-- ✅ HANYA UNTUK LULUS -->
+      <button id="btnLanjut" class="btn-primary hidden">
+        Materi Berikutnya
+      </button>
+
+    </div>
+  </div>
+</div>
+<div id="helpModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Bantuan Penggunaan</h2>
+
+    <h4>Kelas & Pertemuan</h4>
+    <ul>
+      <li>Kelas disesuaikan jenjang siswa</li>
+      <li>Pertemuan dibuka bertahap</li>
+    </ul>
+
+    <h4>Video & Kuis</h4>
+    <ul>
+      <li>Video wajib ditonton sampai selesai</li>
+      <li>Kuis terbuka setelah video selesai</li>
+    </ul>
+
+    <h4>Navigasi</h4>
+    <p>Gunakan breadcrumbs untuk mengetahui posisi belajar</p>
+
+    <button id="goHelpPage" class="btn-secondary" >👉 Kunjungi Halaman Bantuan</button>
+    <button id="closeHelp" class="btn-primary">Tutup</button>
+  </div>
+</div>
+
+</main>
+
+
+
+      <script src="belajar.js"></script>
+      <script src="navigasi.js"></script>
+      <script src="state.js"></script>
+      <script src="breadcrumbs-state.js"></script>
+            <script src="sidebar.js"></script>
+      <script src="https://www.youtube.com/iframe_api"></script>
+      <script src="video.js"></script>
+      <script src="quiz-data.js"></script>
+      <script src="quiz-engine.js"></script>
+      <script src="quiz-ui.js"></script>
+      <script src="bantuan-modal.js"></script>
+      <script src="learning-progress.js"></script>
+</body>
+</html>

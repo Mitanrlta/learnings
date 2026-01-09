@@ -1,0 +1,286 @@
+/* ===============================
+   LAYOUT CSS
+   Sidebar, Hamburger, Page Layout
+================================ */
+
+/* ===============================
+   DEFAULT (DESKTOP)
+================================ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: var(--ungu-primary);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+.sidebar-brand {
+  margin-bottom: 40px;
+}
+
+.sidebar-brand .logo {
+  color: var(--putih);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  color: var(--putih);
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-item.active {
+  background-color: var(--ungu-soft);
+  color: var(--ungu-primary);
+  font-weight: 600;
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  margin-left: 260px;
+  padding: 32px 40px;
+  position: relative;
+}
+
+/* ===============================
+   PAGE HEADER
+================================ */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 26px;
+}
+
+/* ===============================
+   HELP ICON
+================================ */
+
+.help-icon-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  z-index: 10002;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.help-icon-btn:hover {
+  background: #eef2f7;
+}
+
+.help-icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--ungu-primary);
+}
+
+/* ===============================
+   HAMBURGER BUTTON
+================================ */
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 10001;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #6d28d9;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* ===============================
+   MOBILE MODE
+================================ */
+
+@media (max-width: 768px) {
+  /* Sidebar disembunyikan */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Main content full width */
+  .main-content {
+    margin-left: 0 !important;
+    padding: 24px 20px;
+  }
+
+  /* Hamburger muncul */
+  .hamburger-btn {
+    display: block;
+  }
+
+  /* Help icon tetap di kanan atas */
+  .help-icon-btn {
+    top: 16px;
+    right: 16px;
+  }
+
+  .help-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+/* ===============================
+   MODAL BANTUAN
+=============================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modalFade 0.25s ease;
+}
+
+@keyframes modalFade {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.modal-content h4 {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.modal-content ul {
+  padding-left: 18px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* === AREA BUTTON (VERTIKAL) === */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* BUTTON KE HALAMAN BANTUAN (ATAS) */
+#goHelpPage {
+  background: #2563eb;
+  color: white;
+}
+
+#goHelpPage:hover {
+  background: #1d4ed8;
+}
+
+/* BUTTON TUTUP (BAWAH) */
+#closeHelp {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+#closeHelp:hover {
+  background: #d1d5db;
+}
+
+/* OPTIONAL: Biar aman posisi icon */
+.main-content {
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #111827;
+}

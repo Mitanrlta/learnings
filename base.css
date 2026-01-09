@@ -1,0 +1,69 @@
+/* ===============================
+   BASE CSS
+   Reset & Global Style
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ungu-primary: #8c4af2;
+  --ungu-soft: #ede9fe;
+  --ungu-hover: #8c4af2;
+
+  --putih: #ffffff;
+  --abu-bg: #fbf8ff;
+  --abu-text: #6b7280;
+  --hitam: #1f2937;
+
+  --radius: 14px;
+  --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  background-color: var(--abu-bg);
+  color: var(--hitam);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--abu-text);
+  font-size: 14px;
+}
+
+p strong {
+    font-size: 15px;
+  display: block;
+  margin-bottom: 6px; /* atur sesuai selera: 6–10px aman */
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+}
+
+ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}

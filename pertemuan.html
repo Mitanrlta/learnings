@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pertemuan | LearningID</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="components.css" />
+  </head>
+  <body>
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+  <svg viewBox="0 0 24 24" class="hamburger-icon">
+    <path d="M3 6h18M3 12h18M3 18h18"/>
+  </svg>
+</button>    <!-- ⚠️ DISALIN PERSIS DARI BERANDA.HTML -->
+<aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">LearningID</div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="beranda.html" class="menu-item">Beranda</a>
+        <a href="kelas.html" class="menu-item active">Kelas</a>
+        <a href="dashboard.html" class="menu-item">Dashboard</a>
+        <a href="bantuan.html" class="menu-item">Bantuan</a>
+      </nav>
+    </aside>
+<!-- Breadcrumbs Container -->
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div id="breadcrumbs" class="breadcrumbs"></div>
+ <button id="btnHelpIcon" class="help-icon-btn" aria-label="Bantuan">
+  <svg viewBox="0 0 24 24" class="help-icon" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+    10-4.48 10-10S17.52 2 12 2zm0 17a1.25 1.25 0 1 1 0-2.5
+    1.25 1.25 0 0 1 0 2.5zm1.07-7.75-.9.92C11.45 12.9 11
+    13.5 11 15h2v-.5c0-.55.45-1.05 1.17-1.75l1.24-1.26a2.5
+    2.5 0 1 0-4.27-1.77h-2a4.5 4.5 0 1 1 7.73 3.36z"/>
+  </svg>
+</button>
+
+
+
+      <!-- KALENDER (STICKY) -->
+      <section class="calendar-wrapper">
+        <button class="calendar-nav prev">‹</button>
+
+        <div class="calendar-strip">
+          <!-- ITEM HARI -->
+          <!-- di-generate JS -->
+          <!-- contoh struktur -->
+          <!--
+        <div class="calendar-day active">
+          <span class="day-name">Sen</span>
+          <span class="day-date">2</span>
+        </div>
+        --></div>
+
+        <button class="calendar-nav next">›</button>
+      </section>
+
+      <!-- FILTER SEMESTER -->
+      <section class="semester-filter">
+        <select id="semesterSelect">
+          <option value="">Pilih Semester</option>
+          <option value="ganjil">Semester Ganjil</option>
+          <option value="genap">Semester Genap</option>
+        </select>
+      </section>
+
+      <!-- TABEL PERTEMUAN -->
+      <!-- ⚠️ AWALNYA DISEMBUNYIKAN -->
+    <!-- PERTEMUAN -->
+<section class="pertemuan-container hidden" id="pertemuanContainer">
+
+  <!-- HEADER KLASIFIKASI (HANYA VISUAL) -->
+  <div class="pertemuan-columns">
+    <div>No. Pertemuan</div>
+    <div>Materi Pembelajaran</div>
+    <div>Tgl Pelaksanaan</div>
+    <div>Progress</div>
+  </div>
+
+  <!-- LIST ITEM -->
+  <div class="pertemuan-list"></div>
+
+</section>
+<div id="helpModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Bantuan Penggunaan</h2>
+
+    <h4>Kelas & Pertemuan</h4>
+    <ul>
+      <li>Kelas disesuaikan jenjang siswa</li>
+      <li>Pertemuan dibuka bertahap</li>
+    </ul>
+
+    <h4>Video & Kuis</h4>
+    <ul>
+      <li>Video wajib ditonton sampai selesai</li>
+      <li>Kuis terbuka setelah video selesai</li>
+    </ul>
+
+    <h4>Navigasi</h4>
+    <p>Gunakan breadcrumbs untuk mengetahui posisi belajar</p>
+
+    <button id="goHelpPage" class="btn-secondary" >👉 Kunjungi Halaman Bantuan</button>
+    <button id="closeHelp" class="btn-primary">Tutup</button>
+  </div>
+</div>
+
+
+
+    <!-- JS -->
+     <script src="navigasi.js"></script>
+     <script src="bantuan-modal.js" defer></script>
+          <script src="sidebar.js" defer></script>
+
+<script src="pertemuan.js"></script>
+  </body>
+</html>

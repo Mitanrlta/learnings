@@ -1,0 +1,312 @@
+/* ===============================
+   ROOT & RESET
+=============================== */
+:root {
+  --primary: #8c4af2;
+  --primary-soft: #ede9fe;
+  --primary-light: #f5f3ff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --white: #ffffff;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ===============================
+   MODAL OVERLAY
+=============================== */
+.quiz-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px; /* penting buat HP */
+}
+
+.quiz-modal.hidden {
+  display: none;
+}
+
+.quiz-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   HEADER (SOAL)
+=============================== */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+#quizTimer {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ===============================
+   QUESTION
+=============================== */
+#quizQuestion {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   OPTIONS
+=============================== */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-options button {
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary-light);
+  color: var(--text-dark);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-options button:hover {
+  background: var(--primary-soft);
+}
+
+.quiz-options button.active {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.35);
+}
+
+/* ===============================
+   ACTION BUTTONS
+=============================== */
+.quiz-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: #e3d0ff;
+  color: #3e0497;
+}
+.btn-secondary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* PRIMARY hover */
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary); /* ungu lebih gelap */
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.35);
+}
+
+/* SECONDARY hover → jadi ungu tua + teks putih */
+.btn-secondary:hover:not(:disabled) {
+  background: #e3d0ff;
+  color: #3e0497;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.25);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* ===============================
+   RESULT MODAL
+=============================== */
+/* ===============================
+   MODAL HASIL KUIS
+=============================== */
+#quizResultModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#quizResultModal.hidden {
+  display: none;
+}
+
+/* CARD */
+.quiz-result-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ICON */
+.result-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.result-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* TITLE */
+#resultTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+/* SCORE BOX */
+.result-score-box {
+  margin: 20px 0 14px;
+}
+
+.score-label {
+  display: block;
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  text-transform: lowercase;
+}
+
+.score-value {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #8b5cf6;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
+}
+
+/* BENAR / SALAH */
+.result-stats {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.result-stats p {
+  margin: 4px 0;
+}
+
+/* DESCRIPTION */
+.result-desc {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111827;
+}
+
+/* ACTIONS */
+.quiz-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-actions button {
+  min-width: 220px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* PRIMARY */
+
+@media (max-width: 480px) {
+  .quiz-card {
+    padding: 24px 20px;
+  }
+
+  .result-icon {
+    gap: 10px;
+  }
+
+  .result-icon img {
+    width: 44px;
+    height: 44px;
+  }
+
+  #resultTitle {
+    font-size: 20px;
+  }
+
+  .score-value {
+    font-size: 18px;
+    padding: 8px 22px;
+  }
+
+  .quiz-actions button {
+    width: 100%;
+  }
+}
+
+/* HIDDEN */
+.hidden {
+  display: none !important;
+}
